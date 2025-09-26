@@ -1,0 +1,331 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color palette to match Auraganic Juicery's purple and green theme */
+  --background: oklch(1 0 0); /* Pure white */
+  --foreground: oklch(0.35 0 0); /* Dark gray for text */
+  --card: oklch(0.98 0.02 320); /* Light purple tint for cards */
+  --card-foreground: oklch(0.35 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.35 0 0);
+  --primary: rgb(153 85 187); /* Brand purple */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.65 0.18 142); /* Fresh green accent */
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.98 0.02 320); /* Soft purple muted background */
+  --muted-foreground: oklch(0.5 0 0);
+  --accent: oklch(0.65 0.18 142); /* Vibrant green for accents */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.6 0.2 25); /* Warm orange for alerts */
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9 0.01 320); /* Subtle purple border */
+  --input: oklch(0.98 0.02 320);
+  --ring: rgb(153 85 187 / 0.3); /* Primary purple with transparency */
+  --chart-1: rgb(153 85 187);
+  --chart-2: oklch(0.65 0.18 142);
+  --chart-3: oklch(0.6 0.2 280);
+  --chart-4: oklch(0.7 0.15 160);
+  --chart-5: oklch(0.65 0.2 200);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.98 0.02 320);
+  --sidebar-foreground: oklch(0.35 0 0);
+  --sidebar-primary: rgb(153 85 187);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.65 0.18 142);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.9 0.01 320);
+  --sidebar-ring: rgb(153 85 187 / 0.3);
+}
+
+.dark {
+  --background: oklch(0.12 0 0);
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.15 0.02 320);
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.12 0 0);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: rgb(153 85 187);
+  --primary-foreground: oklch(0.12 0 0);
+  --secondary: oklch(0.25 0.05 320);
+  --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.18 0.02 320);
+  --muted-foreground: oklch(0.7 0 0);
+  --accent: oklch(0.7 0.18 142);
+  --accent-foreground: oklch(0.12 0 0);
+  --destructive: oklch(0.5 0.2 25);
+  --destructive-foreground: oklch(0.95 0 0);
+  --border: oklch(0.25 0.02 320);
+  --input: oklch(0.18 0.02 320);
+  --ring: rgb(153 85 187 / 0.3);
+  --chart-1: rgb(153 85 187);
+  --chart-2: oklch(0.7 0.18 142);
+  --chart-3: oklch(0.65 0.2 280);
+  --chart-4: oklch(0.75 0.15 160);
+  --chart-5: oklch(0.7 0.2 200);
+  --sidebar: oklch(0.15 0.02 320);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-primary: rgb(153 85 187);
+  --sidebar-primary-foreground: oklch(0.12 0 0);
+  --sidebar-accent: oklch(0.25 0.05 320);
+  --sidebar-accent-foreground: oklch(0.95 0 0);
+  --sidebar-border: oklch(0.25 0.02 320);
+  --sidebar-ring: rgb(153 85 187 / 0.3);
+}
+
+@theme inline {
+  /* Updated font variables to use elegant fonts */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-dancing);
+  /* Added Amatic SC font variable for h1 styling */
+  --font-amatic: var(--font-amatic);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Updated all heading styles to use Amatic SC font with proper hierarchy */
+  h1 {
+    font-family: var(--font-amatic) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em !important;
+    font-size: 3.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-family: var(--font-amatic) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em !important;
+    font-size: 2.75rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h3 {
+    font-family: var(--font-amatic) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em !important;
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-amatic) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+  }
+}
+
+@layer utilities {
+  .organic-blob {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: organic-morph 20s ease-in-out infinite;
+  }
+
+  .organic-blob-2 {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: organic-morph-2 25s ease-in-out infinite;
+  }
+
+  .leaf-shadow {
+    /* Updated shadow to use purple accent */
+    filter: drop-shadow(0 4px 20px rgb(153 85 187 / 0.15));
+  }
+
+  .natural-glow {
+    /* Updated glow to use purple primary color */
+    box-shadow: 0 0 20px rgb(153 85 187 / 0.1), 0 0 40px rgb(153 85 187 / 0.05), inset 0 1px 0
+      oklch(1 0 0 / 0.1);
+  }
+
+  .chakra-root {
+    color: oklch(0.4 0.2 0);
+  } /* Deep red */
+  .chakra-sacral {
+    color: oklch(0.6 0.25 45);
+  } /* Orange */
+  .chakra-solar {
+    color: oklch(0.7 0.2 85);
+  } /* Yellow */
+  .chakra-heart {
+    color: oklch(0.5 0.15 142);
+  } /* Green */
+  .chakra-throat {
+    color: oklch(0.6 0.2 240);
+  } /* Blue */
+  .chakra-third-eye {
+    color: oklch(0.4 0.2 280);
+  } /* Indigo */
+  .chakra-crown {
+    color: oklch(0.7 0.15 320);
+  } /* Violet */
+
+  .energy-flow {
+    background: linear-gradient(
+      45deg,
+      oklch(0.4 0.2 0) /* Root */,
+      oklch(0.6 0.25 45) /* Sacral */,
+      oklch(0.7 0.2 85) /* Solar */,
+      oklch(0.5 0.15 142) /* Heart */,
+      oklch(0.6 0.2 240) /* Throat */,
+      oklch(0.4 0.2 280) /* Third Eye */,
+      oklch(0.7 0.15 320) /* Crown */
+    );
+    background-size: 400% 400%;
+    animation: chakra-flow 12s ease-in-out infinite;
+  }
+
+  .spiritual-glow {
+    /* Subtle spiritual glow with reduced opacity */
+    box-shadow: 0 0 15px rgb(153 85 187 / 0.15), 0 0 30px oklch(0.65 0.18 142 / 0.1), 0 0 45px
+      oklch(0.6 0.2 280 / 0.05);
+  }
+
+  .aura-pulse {
+    animation: aura-pulse 4s ease-in-out infinite;
+  }
+}
+
+@keyframes organic-morph {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: translate(5px, -5px) rotate(1deg);
+  }
+  50% {
+    border-radius: 50% 60% 30% 60% / 60% 40% 60% 40%;
+    transform: translate(-5px, 5px) rotate(-1deg);
+  }
+  75% {
+    border-radius: 60% 40% 60% 30% / 30% 60% 40% 70%;
+    transform: translate(3px, 3px) rotate(0.5deg);
+  }
+}
+
+@keyframes organic-morph-2 {
+  0%,
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    transform: translate(-3px, 7px) rotate(-0.5deg);
+  }
+  66% {
+    border-radius: 40% 60% 60% 40% / 40% 60% 40% 60%;
+    transform: translate(7px, -3px) rotate(1deg);
+  }
+}
+
+@keyframes gentle-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes leaf-sway {
+  0%,
+  100% {
+    transform: rotate(-2deg) translateX(0px);
+  }
+  50% {
+    transform: rotate(2deg) translateX(5px);
+  }
+}
+
+@keyframes chakra-flow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+@keyframes aura-pulse {
+  0%,
+  100% {
+    /* Updated aura pulse to use purple and green colors */
+    box-shadow: 0 0 20px rgb(153 85 187 / 0.4), 0 0 40px oklch(0.65 0.18 142 / 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgb(153 85 187 / 0.6), 0 0 80px oklch(0.65 0.18 142 / 0.4);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes energy-spiral {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
