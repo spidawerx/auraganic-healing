@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles, Leaf, Heart, Star, Zap } from "lucide-react"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
@@ -10,11 +11,11 @@ export function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
         style={{
-          backgroundImage: `url('/serene-natural-landscape-with-mountains-and-peacef.jpg')`,
+          backgroundImage: `url('/nature-walk.png')`,
         }}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/45 to-background/55" />
 
       <div
         className="absolute top-20 left-10 w-32 h-16 chakra-root opacity-20 animate-[energy-spiral_8s_linear_infinite] rounded-full blur-xl"
@@ -47,27 +48,22 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="inline-flex items-center gap-3 spiritual-glow bg-gradient-to-r from-accent/20 to-primary/15 text-primary px-6 py-3 rounded-full text-sm font-medium backdrop-blur-sm border border-primary/20 aura-pulse">
-            <div className="flex items-center gap-1">
-              <Star className="w-4 h-4 chakra-crown animate-pulse" />
-              <Zap className="w-3 h-3 chakra-solar animate-pulse" />
-            </div>
-            {"✨ Auraganic Healing - Where Nature is the Way ✨"}
-          </div>
+        <div className="max-w-4xl mx-auto space-y-24">
 
-          <h1 className="text-5xl md:text-7xl font-bold text-balance leading-tight">
-            {"Discover the "}
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-extrabold">
-              {"Auraganic Way"}
+
+          <h1 className="text-5xl md:text-7xl font-bold text-balance leading-tight mt-32 drop-shadow-lg">
+
+            <span className="text-6xl md:text-8xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-extrabold drop-shadow-2xl">
+              {"Auraganic Healing"}
             </span>
-            {" to Natural Healing"}
+            <br />
+              {"Where Nature leads the way"}
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            {
-              "We are one with nature. Let Auraganic bring you back to your natural state. The answers for healing are within your body already - we just help you get out of the way."
-            }
+          <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto text-pretty leading-relaxed font-light tracking-wide drop-shadow-md">
+            {"Experience natural healing and holistic wellness through the Auraganic Healing approach to mind-body health. Restore inner balance through bodywork, Emotion Code, holistic coaching, and nature-based therapies."}
+            <br />
+            {"Discover the power of organic healing methods that work with your body's innate wisdom."}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -79,15 +75,16 @@ export function HeroSection() {
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
+              asChild
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-6 bg-background/80 backdrop-blur-sm rounded-full border border-primary/30 hover:bg-primary/5"
+              className="text-lg px-8 py-6 bg-background/80 backdrop-blur-sm rounded-full border border-primary/30 hover:bg-primary"
             >
-              {"Explore Healing Services"}
+              <Link href="#services">{"Explore Healing Services"}</Link>
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 mb-24">
             <div className="space-y-3 p-6 rounded-3xl bg-background/40 backdrop-blur-sm border border-primary/20 spiritual-glow">
               <div className="flex items-center justify-center gap-2">
                 <div className="text-3xl font-bold text-primary">{"Since 2014"}</div>

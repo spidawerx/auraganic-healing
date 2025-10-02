@@ -80,7 +80,7 @@ export function ServicesSection() {
   ]
 
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section id="services" className="py-24 px-4 relative overflow-hidden">
       <div className="absolute inset-0 energy-flow opacity-5" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
@@ -120,7 +120,7 @@ export function ServicesSection() {
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-muted-foreground mb-6">{service.description}</p>
-                  <Button asChild variant="outline" className="w-full rounded-full border-primary/30 hover:bg-primary/5">
+                  <Button asChild variant="outline" className="w-full rounded-full border-primary/30 hover:bg-primary">
                     <Link href={`/services/${service.slug}`}>Learn More</Link>
                   </Button>
                 </CardContent>
@@ -130,12 +130,8 @@ export function ServicesSection() {
         </div>
 
         <div className="text-center mt-16">
-          <Button
-            asChild
-            size="lg"
-            className="text-lg px-8 py-6 spiritual-glow rounded-full border-0 bg-green-600 hover:bg-green-700 text-white"
-          >
-            <Link href="/services">See All Services</Link>
+          <Button asChild size="lg" className="rounded-full bg-green-600 hover:bg-green-700 text-white">
+            <Link href="/consultation">Book a Free 20‑Minute Consultation</Link>
           </Button>
         </div>
       </div>

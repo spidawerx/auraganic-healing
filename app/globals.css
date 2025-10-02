@@ -124,7 +124,12 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-light tracking-wide;
+  }
+
+  /* Apply clean font styling to all text elements */
+  p, li, span, div, label, input, textarea, button {
+    @apply font-light tracking-wide;
   }
 
   /* Updated all heading styles to use Amatic SC font with proper hierarchy */

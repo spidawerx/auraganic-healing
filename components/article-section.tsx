@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Clock, User, Heart, Leaf, Sparkles } from "lucide-react"
+import Link from "next/link"
 
 export function ArticleSection() {
   return (
@@ -43,7 +44,7 @@ export function ArticleSection() {
           {/* Article Content */}
           <div className="prose prose-lg max-w-none space-y-8">
             <div className="bg-gradient-to-br from-background/80 to-primary/5 p-8 rounded-3xl border border-primary/20 backdrop-blur-sm spiritual-glow">
-              <p className="text-xl leading-relaxed text-muted-foreground mb-6">
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
                 {
                   "For over a decade, I've witnessed something extraordinary: the human body's innate ability to heal itself when we simply get out of its way. Nature has equipped us with everything we need - we just need to remember how to listen."
                 }
@@ -59,7 +60,7 @@ export function ArticleSection() {
                 <p className="text-lg font-medium text-primary mb-2">{"The Auraganic Truth:"}</p>
                 <p className="text-muted-foreground italic">
                   {
-                    '"We are one with nature. The answers for healing are within your body already - we just help you get out of the way."'
+                    '"As the human body was created by nature, it already came with everything it needs to heal. We simply help clear the way, and get you back in touch with your inner self."'
                   }
                 </p>
               </div>
@@ -106,16 +107,9 @@ export function ArticleSection() {
 
           {/* Call to Action */}
           <div className="text-center mt-12">
-            <Button
-              size="lg"
-              className="text-lg px-8 py-6 group spiritual-glow rounded-full border-0 aura-pulse bg-green-600 hover:bg-green-700 text-white"
-            >
-              {"Book Your 20min Consultation"}
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button asChild size="lg" className="rounded-full bg-green-600 hover:bg-green-700 text-white">
+              <Link href="/consultation">Book a Free 20‑Minute Consultation</Link>
             </Button>
-            <p className="text-sm text-muted-foreground mt-4">
-              {"Discover what your body has been trying to tell you"}
-            </p>
           </div>
         </div>
       </div>

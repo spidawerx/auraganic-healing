@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { Leaf, Heart, Brain, Zap, Moon, Sun, Flower, Waves, Sparkles } from "lucide-react"
+import Link from "next/link"
 
 const modalities = [
   {
@@ -70,7 +72,7 @@ const modalities = [
 
 export function HealingModalitiesSection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-muted/20 via-background to-muted/30 relative overflow-hidden">
+    <section id="healing-modalities" className="py-24 bg-gradient-to-br from-muted/20 via-background to-muted/30 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
@@ -123,6 +125,12 @@ export function HealingModalitiesSection() {
               </Card>
             )
           })}
+        </div>
+
+        <div className="text-center mt-16">
+          <Button asChild size="lg" className="rounded-full">
+            <Link href="/consultation">Book a Free 20‑Minute Consultation</Link>
+          </Button>
         </div>
       </div>
     </section>

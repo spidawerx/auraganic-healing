@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Gift } from "lucide-react"
+import Link from "next/link"
 
 export function NewsletterSection() {
   return (
@@ -38,6 +39,12 @@ export function NewsletterSection() {
             </p>
           </CardContent>
         </Card>
+
+        <div className="text-center mt-12">
+          <Button asChild size="lg" className="rounded-full bg-green-600 hover:bg-green-700 text-white">
+            <Link href="/consultation">Book a Free 20‑Minute Consultation</Link>
+          </Button>
+        </div>
       </div>
     </section>
   )

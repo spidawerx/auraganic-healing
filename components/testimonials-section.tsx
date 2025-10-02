@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
 import { Star, Quote, Sparkles } from "lucide-react"
+import Link from "next/link"
 
 const testimonials = [
   {
@@ -117,6 +119,12 @@ export function TestimonialsSection() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <Button asChild size="lg" className="rounded-full">
+            <Link href="/consultation">Book a Free 20‑Minute Consultation</Link>
+          </Button>
         </div>
       </div>
     </section>
