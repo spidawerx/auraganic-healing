@@ -93,7 +93,12 @@ export async function generateMetadata(): Promise<Metadata> {
       images: ["/placeholder.jpg"],
     },
     icons: {
-      icon: "/placeholder-logo.svg",
+      icon: [
+        { url: "/auraganic-site-icon-8.png", sizes: "512x512", type: "image/png" },
+        { url: "/auraganic-site-icon-8.png", sizes: "32x32", type: "image/png" }
+      ],
+      shortcut: "/auraganic-site-icon-8.png",
+      apple: "/auraganic-site-icon-8.png",
     },
   }
 
