@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users, BookOpen, Calendar, MessageCircle } from "lucide-react"
+import Link from "next/link"
 
 const communityFeatures = [
   {
@@ -37,7 +38,7 @@ export function CommunitySection() {
             </h2>
             <p className="text-xl text-muted-foreground mb-8 text-pretty leading-relaxed">
               {
-                "You don't have to walk this path alone. Our community of over 10,000 members supports each other through every step of the healing journey."
+                "You don't have to walk this path alone. Our community of over 100 members supports each other through every step of the healing journey."
               }
             </p>
 
@@ -58,8 +59,8 @@ export function CommunitySection() {
               })}
             </div>
 
-            <Button size="lg" className="text-lg px-8 py-6">
-              {"Join Our Community"}
+            <Button asChild size="lg" className="text-lg px-8 py-6">
+              <Link href="/consultation">{"Join Our Community"}</Link>
             </Button>
           </div>
 
@@ -74,7 +75,7 @@ export function CommunitySection() {
               <CardContent>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Users className="w-4 h-4" />
-                  {"247 members participating"}
+                  {"27 members participating"}
                 </div>
               </CardContent>
             </Card>

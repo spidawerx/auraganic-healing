@@ -107,7 +107,7 @@ export default function ServicePage({ params }: Props) {
               <Link href="/consultation">Book Free 20‑Minute Consultation</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full">
-              <Link href="/services">Back to Services</Link>
+              <Link href="/">Back to Home</Link>
             </Button>
           </div>
         </div>

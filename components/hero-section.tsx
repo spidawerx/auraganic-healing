@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles, Leaf, Heart, Star, Zap } from "lucide-react"
+import { Sparkles, Leaf, Heart, Star, Zap } from "lucide-react"
 import Link from "next/link"
 
 export function HeroSection() {
@@ -9,9 +9,11 @@ export function HeroSection() {
 
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
+        className="absolute inset-0 bg-center bg-no-repeat opacity-60"
         style={{
           backgroundImage: `url('/nature-walk.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
         }}
       />
 
@@ -51,34 +53,25 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto space-y-24">
 
 
-          <h1 className="text-5xl md:text-7xl font-bold text-balance leading-tight mt-32 drop-shadow-lg">
+          <h1 className="text-6xl md:text-8xl font-bold text-balance leading-tight mt-32 drop-shadow-lg">
 
-            <span className="text-6xl md:text-8xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-extrabold drop-shadow-2xl">
+            <span className="text-7xl md:text-9xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-extrabold drop-shadow-2xl">
               {"Auraganic Healing"}
             </span>
             <br />
-              {"Where Nature leads the way"}
+              {"Practical, compassionate, and nature-led healing"}
           </h1>
 
           <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto text-pretty leading-relaxed font-light tracking-wide drop-shadow-md">
-            {"Experience natural healing and holistic wellness through the Auraganic Healing approach to mind-body health. Restore inner balance through bodywork, Emotion Code, holistic coaching, and nature-based therapies."}
-            <br />
-            {"Discover the power of organic healing methods that work with your body's innate wisdom."}
+            {"Discover the power of natural healing and holistic wellness through the Auraganic Healing approach to mind-body health. Restore inner balance through healing modalities such as bodywork, Emotion Code, holistic coaching, and other nature-based therapies. Discover the power of organic healing methods that work with your body's innate wisdom."}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="text-lg px-8 py-6 group spiritual-glow rounded-full border-0 aura-pulse bg-green-600 hover:bg-green-700 text-white"
-            >
-              {"Read Our Latest Article"}
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center -mt-12">
             <Button
               asChild
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-6 bg-background/80 backdrop-blur-sm rounded-full border border-primary/30 hover:bg-primary"
+              className="text-lg px-8 py-6 bg-primary backdrop-blur-sm rounded-full hover:bg-gradient-to-r hover:from-primary hover:to-accent text-white border-0"
             >
               <Link href="#services">{"Explore Healing Services"}</Link>
             </Button>

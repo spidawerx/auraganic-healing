@@ -10,32 +10,32 @@ const testimonials = [
     location: "San Francisco, CA",
     avatar: "/woman-smiling-peaceful-natural-lighting.jpg",
     content:
-      "After years of conventional treatments failing me, I discovered energy healing through this community. The transformation has been nothing short of miraculous. I finally feel like myself again.",
-    modality: "Energy Healing & Herbal Medicine",
+      "I've been dealing with anxiety for years and tried everything. After 3 months of bodywork sessions with Nicky, I finally found some relief. I still have tough days, but I have tools now that actually help me manage it better.",
+    modality: "Bodywork & Nervous System Support",
   },
   {
     name: "Marcus Rodriguez",
     location: "Austin, TX",
     avatar: "/man-peaceful-expression-natural-outdoor-setting.jpg",
     content:
-      "The holistic approach here changed my entire perspective on health. Instead of just treating symptoms, we addressed the root causes. My chronic pain is gone and my energy is through the roof.",
-    modality: "Acupuncture & Mind-Body Healing",
+      "The Emotion Code work was surprisingly effective for me. I was skeptical at first, but after a few sessions, I noticed I was carrying less emotional weight from past experiences. It's been about 6 months and I still feel the difference.",
+    modality: "Emotion Code & Holistic Coaching",
   },
   {
     name: "Dr. Elena Vasquez",
     location: "Portland, OR",
     avatar: "/professional-woman-doctor-warm-smile-natural-light.jpg",
     content:
-      "As a former skeptic and medical doctor, I was amazed by the results I witnessed. The integration of ancient wisdom with modern understanding creates truly powerful healing outcomes.",
-    modality: "Integrative Medicine Approach",
+      "As a healthcare provider, I appreciate how Nicky approaches healing with both scientific understanding and compassion. The lifestyle changes she suggested for my sleep and stress management have made a real difference in my daily life.",
+    modality: "Holistic Coaching & Lifestyle Support",
   },
   {
     name: "James Thompson",
     location: "Boulder, CO",
     avatar: "/middle-aged-man-serene-expression-mountain-backgro.jpg",
     content:
-      'Sound healing and crystal therapy seemed too "out there" for me initially. But the profound peace and clarity I experience now has made me a true believer in these ancient practices.',
-    modality: "Sound & Crystal Therapy",
+      "I came in with chronic fatigue and feeling disconnected from my body. The combination of bodywork and the practical lifestyle guidance has helped me feel more grounded. It's been a gradual process, but I'm definitely in a better place than when I started.",
+    modality: "Bodywork & Holistic Coaching",
   },
 ]
 

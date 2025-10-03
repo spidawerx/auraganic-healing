@@ -75,7 +75,7 @@ export function Footer() {
         <Separator className="mb-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <div>{"© 2024 Auraganic Healing. All rights reserved."}</div>
+          <div>{"© 2025 Auraganic Healing. All rights reserved."}</div>
           <div className="flex items-center gap-6">
             <Link href="/about" className="hover:text-primary transition-colors">
               {"Privacy Policy"}
