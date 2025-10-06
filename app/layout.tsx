@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Dancing_Script, Inter, Amatic_SC } from "next/font/google"
 import { Suspense } from "react"
 import Script from "next/script"
+import { Navigation } from "@/components/navigation"
 import "./globals.css"
 
 const dancingScript = Dancing_Script({
@@ -136,6 +137,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${dancingScript.variable} ${inter.variable} ${amaticSC.variable}`}>
+        <Navigation />
         <Suspense fallback={null}>{children}</Suspense>
         
         {/* Google Analytics */}
