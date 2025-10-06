@@ -10,7 +10,7 @@ import { AboutSection } from "@/components/about-section"
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-16">
       <HeroSection />
       <AboutSection />
       <ArticleSection />

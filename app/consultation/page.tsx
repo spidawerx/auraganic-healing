@@ -64,7 +64,7 @@ Message: ${formData.message}
   const isFormValid = selectedDate && selectedTime && formData.name && formData.email
 
   return (
-    <main className="min-h-screen py-20 px-4">
+    <main className="min-h-screen pt-16 py-20 px-4">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Free 20‑Minute Consultation</h1>

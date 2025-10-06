@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen py-16 px-4">
+    <main className="min-h-screen pt-16 py-16 px-4">
       <div className="container mx-auto max-w-5xl">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Healing Services</h1>
         <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
